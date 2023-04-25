@@ -1,0 +1,14 @@
+gcloud beta run deploy chatgpt-ui --image gcr.io/sansou-dev/chatgpt-ui:latest \
+--region us-central1 \
+--allow-unauthenticated \
+--env-vars-file ./cloudrun/env.yaml \
+--memory 512Mi \
+--cpu 1 \
+--timeout 300 \
+--concurrency 20 \
+--min-instances 0 \
+--max-instances 3 \
+
+
+https://chatgpt.ntange-private-12345.site/
+

@@ -2,8 +2,11 @@ version: '3.6'
 
 services:
   chatgpt:
-    build: .
+    image: chatgpt-ui:latest
     ports:
       - 3000:3000
+      - 8080:8080
     environment:
-      - 'OPENAI_API_KEY='
+      - 'PORT=8080'
+      - 'OPENAI_ORGANIZATION=<OpenAIアカウントのORGANIZAION_iD>'
+      - 'OPENAI_API_KEY=<OpenAIアカウントで作成したAPI_KEY>'
